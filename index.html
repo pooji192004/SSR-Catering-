@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SSR Catering Service</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════ -->
+<!--         OPENING ANIMATION             -->
+<!-- ═══════════════════════════════════════ -->
+<div id="intro" class="intro">
+  <div class="intro-content">
+    <div class="diya-left">🪔</div>
+    <div class="diya-right">🪔</div>
+    <div class="flower-top">🌸🌺🌸🌺🌸</div>
+   <img src="{{ url_for('static', filename='image/ssr image.jpeg') }}"
+     alt="SSR Catering"
+     style="width:100%; height:500px; object-fit:cover;">
+    <h1 class="intro-title">SSR</h1>
+    <h2 class="intro-subtitle">Catering Service</h2>
+    <p class="intro-tagline">Taste the Tradition, Feel the Love</p>
+    <div class="flower-bottom">🌸🌺🌸🌺🌸</div>
+  </div>
+  <button class="skip-btn" onclick="skipIntro()">Skip ▶</button>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!--           MAIN WEBSITE                -->
+<!-- ═══════════════════════════════════════ -->
+<div id="main" class="main hidden">
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-logo">🍛 SSR Catering</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#booking">Book Now</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="lang-switcher">
+      <button onclick="setLang('en')" class="lang-btn">EN</button>
+      <button onclick="setLang('te')" class="lang-btn">తె</button>
+      <button onclick="setLang('ta')" class="lang-btn">த</button>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title" data-en="SSR Catering Service" data-te="SSR కేటరింగ్ సర్వీస్" data-ta="SSR கேட்டரிங் சர்வீஸ்">SSR Catering Service</h1>
+      <p class="hero-sub" data-en="Making Every Event Delicious and Memorable" data-te="ప్రతి కార్యక్రమాన్ని రుచికరంగా మరియు యాదగారంగా మార్చడం" data-ta="ஒவ்வொரு நிகழ்வையும் சுவையாகவும் மறக்கமுடியாததாகவும் மாற்றுகிறோம்">Making Every Event Delicious and Memorable</p>
+      <div class="hero-btns">
+        <a href="#booking" class="btn-primary" data-en="Book Now" data-te="ఇప్పుడు బుక్ చేయండి" data-ta="இப்போது பதிவு செய்யுங்கள்">Book Now</a>
+        <a href="#menu" class="btn-secondary" data-en="View Menu" data-te="మెనూ చూడండి" data-ta="மெனு பார்க்கவும்">View Menu</a>
+      </div>
+    </div>
+  </section>
+  <!-- PICKLES, PAPADS & POWDERS SHOP -->
+<section id="products" class="products-section">
+  <div class="section-title">
+    <h2>🥭 Homemade Pickles, Papads & Powders</h2>
+    <p>Available for Online Orders</p>
+  </div>
+
+  <div class="menu-grid">
+
+    <!-- Pickles -->
+    <div class="menu-card">
+      <h3>🥭 Mango Pickle</h3>
+      <p>₹100</p>
+      <button class="btn-primary">Order Now</button>
+    </div>
+
+    <div class="menu-card">
+      <h3>🍋 Lemon Pickle</h3>
+      <p>₹100</p>
+      <button class="btn-primary">Order Now</button>
+    </div>
+
+    <div class="menu-card">
+      <h3>🍈 Citron Pickle</h3>
+      <p>₹100</p>
+      <button class="btn-primary">Order Now</button>
+    </div>
+
+    <div class="menu-card">
+      <h3>🍅 Tomato Pickle</h3>
+      <p>₹100</p>
+      <button class="btn-primary">Order Now</button>
+    </div>
+
+    <!-- Papads -->
+    <div class="menu-card">
+      <h3>🫓 Rice Papads</h3>
+      <p>₹50</p>
+      <button class="btn-primary">Order Now</button>
+    </div>
+
+    <div class="menu-card">
+      <h3>🌶️ Spicy Papads</h3>
+      <p>₹50</p>
+      <button class="btn-primary">Order Now</button>
+    </div>
+
+    <div class="menu-card">
+      <h3>🍘 Sundaka Fry</h3>
+      <p>₹50</p>
+      <button class="btn-primary">Order Now</button>
+    </div>
+
+    <!-- Powders -->
+    <div class="menu-card">
+      <h3>🌶️ Andhra Powder</h3>
+      <p>₹80</p>
+      <button class="btn-primary">Order Now</button>
+    </div>
+
+    <div class="menu-card">
+      <h3>⭐ Special Andhra Powder</h3>
+      <p>₹80</p>
+      <button class="btn-primary">Order Now</button>
+    </div>
+
+    <div class="menu-card">
+      <h3>🍃 Curry Leaves Powder</h3>
+      <p>₹80</p>
+      <button class="btn-primary">Order Now</button>
+    </div>
+
+    <div class="menu-card">
+      <h3>🌿 Drumstick Leaves Powder</h3>
+      <p>₹80</p>
+      <button class="btn-primary">Order Now</button>
+    </div>
+
+  </div>
+</section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="section-title">
+      <h2 data-en="About Us" data-te="మా గురించి" data-ta="எங்களை பற்றி">About Us</h2>
+      <p data-en="Serving with love since years" data-te="సంవత్సరాల నుండి ప్రేమతో సేవిస్తున్నాము" data-ta="ஆண்டுகளாக அன்புடன் சேவை செய்கிறோம்">Serving with love since years</p>
+    </div>
+    <div class="about-content">
+      <div class="about-text">
+        <p data-en="SSR Catering Service has been serving delicious food at all kinds of events with love, hygiene, and tradition. We bring the authentic taste of home to your special occasions." data-te="SSR కేటరింగ్ సర్వీస్ అన్ని రకాల కార్యక్రమాలలో ప్రేమతో, పరిశుభ్రతతో మరియు సంప్రదాయంతో రుచికరమైన ఆహారాన్ని అందిస్తోంది." data-ta="SSR கேட்டரிங் சர்வீஸ் அனைத்து வகை நிகழ்வுகளிலும் அன்பு, சுகாதாரம் மற்றும் பாரம்பரியத்துடன் சுவையான உணவை வழங்கி வருகிறது.">SSR Catering Service has been serving delicious food at all kinds of events with love, hygiene, and tradition.</p>
+      </div>
+      <div class="stats-row">
+        <div class="stat-box">
+          <h3 class="counter" data-target="500">0</h3>
+          <p data-en="Events Completed" data-te="పూర్తయిన కార్యక్రమాలు" data-ta="நிறைவு செய்த நிகழ்வுகள்">Events Completed</p>
+        </div>
+        <div class="stat-box">
+          <h3 class="counter" data-target="1000">0</h3>
+          <p data-en="Happy Customers" data-te="సంతోషంగా ఉన్న కస్టమర్లు" data-ta="மகிழ்ச்சியான வாடிக்கையாளர்கள்">Happy Customers</p>
+        </div>
+        <div class="stat-box">
+          <h3 class="counter" data-target="10">0</h3>
+          <p data-en="Years Experience" data-te="సంవత్సరాల అనుభవం" data-ta="ஆண்டுகள் அனுபவம்">Years Experience</p>
+        </div>
+        <div class="stat-box">
+          <h3 class="counter" data-target="50">0</h3>
+          <p data-en="Menu Items" data-te="మెనూ ఐటమ్స్" data-ta="மெனு உருப்படிகள்">Menu Items</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section id="events" class="events">
+    <div class="section-title">
+      <h2 data-en="Events We Serve" data-te="మేము సేవిస్తున్న కార్యక్రమాలు" data-ta="நாங்கள் சேவை செய்யும் நிகழ்வுகள்">Events We Serve</h2>
+    </div>
+    <div class="events-grid">
+      <div class="event-card">
+        <div class="event-icon">💍</div>
+        <h3 data-en="Wedding" data-te="వివాహం" data-ta="திருமணம்">Wedding</h3>
+        <p data-en="Grand wedding feasts with traditional recipes" data-te="సంప్రదాయ వంటకాలతో గ్రాండ్ వివాహ విందులు" data-ta="பாரம்பரிய சமையல் குறிப்புகளுடன் கிராண்ட் திருமண விருந்துகள்">Grand wedding feasts with traditional recipes</p>
+      </div>
+      <div class="event-card">
+        <div class="event-icon">🎊</div>
+        <h3 data-en="Reception" data-te="రిసెప్షన్" data-ta="வரவேற்பு">Reception</h3>
+        <p data-en="Elegant reception dinners for your guests" data-te="మీ అతిథులకు సొగసైన రిసెప్షన్ విందులు" data-ta="உங்கள் விருந்தினர்களுக்கு நேர்த்தியான வரவேற்பு இரவு உணவு">Elegant reception dinners for your guests</p>
+      </div>
+      <div class="event-card">
+        <div class="event-icon">💑</div>
+        <h3 data-en="Engagement" data-te="నిశ్చితార్థం" data-ta="நிச்சயதார்த்தம்">Engagement</h3>
+        <p data-en="Sweet celebrations with delicious spreads" data-te="రుచికరమైన వంటకాలతో మధురమైన వేడుకలు" data-ta="சுவையான உணவுகளுடன் இனிமையான கொண்டாட்டங்கள்">Sweet celebrations with delicious spreads</p>
+      </div>
+      <div class="event-card">
+        <div class="event-icon">🎂</div>
+        <h3 data-en="Birthday" data-te="పుట్టినరోజు" data-ta="பிறந்தநாள்">Birthday</h3>
+        <p data-en="Make birthdays extra special with great food" data-te="గొప్ప ఆహారంతో పుట్టినరోజులను అదనంగా ప్రత్యేకంగా చేయండి" data-ta="சிறந்த உணவுடன் பிறந்தநாளை மிகவும் சிறப்பாக்குங்கள்">Make birthdays extra special with great food</p>
+      </div>
+      <div class="event-card">
+        <div class="event-icon">💼</div>
+        <h3 data-en="Corporate" data-te="కార్పొరేట్" data-ta="கார்ப்பரேட்">Corporate</h3>
+        <p data-en="Professional catering for corporate events" data-te="కార్పొరేట్ ఈవెంట్‌లకు వృత్తిపరమైన కేటరింగ్" data-ta="கார்ப்பரேட் நிகழ்வுகளுக்கு தொழில்முறை கேட்டரிங்">Professional catering for corporate events</p>
+      </div>
+      <div class="event-card">
+        <div class="event-icon">🏠</div>
+        <h3 data-en="House Warming" data-te="గృహప్రవేశం" data-ta="இல்ல விழா">House Warming</h3>
+        <p data-en="Bless your new home with delicious food" data-te="రుచికరమైన ఆహారంతో మీ కొత్త ఇంటిని ఆశీర్వదించండి" data-ta="சுவையான உணவுடன் உங்கள் புதிய வீட்டை ஆசீர்வதியுங்கள்">Bless your new home with delicious food</p>
+      </div>
+      <div class="event-card">
+        <div class="event-icon">👶</div>
+        <h3 data-en="Baby Shower" data-te="బేబీ షవర్" data-ta="பேபி ஷவர்">Baby Shower</h3>
+        <p data-en="Celebrate new arrivals with joy and food" data-te="ఆనందం మరియు ఆహారంతో కొత్త రాకలను జరుపుకోండి" data-ta="மகிழ்ச்சியுடனும் உணவுடனும் புதிய வரவுகளைக் கொண்டாடுங்கள்">Celebrate new arrivals with joy and food</p>
+      </div>
+      <div class="event-card">
+        <div class="event-icon">🪔</div>
+        <h3 data-en="Festival Events" data-te="పండుగ కార్యక్రమాలు" data-ta="திருவிழா நிகழ்வுகள்">Festival Events</h3>
+        <p data-en="Traditional festival food for all occasions" data-te="అన్ని సందర్భాలకు సంప్రదాయ పండుగ ఆహారం" data-ta="அனைத்து சந்தர்ப்பங்களுக்கும் பாரம்பரிய திருவிழா உணவு">Traditional festival food for all occasions</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu" class="menu-section">
+    <div class="section-title">
+      <h2 data-en="Our Menu" data-te="మా మెనూ" data-ta="எங்கள் மெனு">Our Menu</h2>
+    </div>
+    <div class="menu-tabs">
+      <button class="tab-btn active" onclick="filterMenu('all')">All</button>
+      <button class="tab-btn" onclick="filterMenu('veg')">🟢 Veg</button>
+      <button class="tab-btn" onclick="filterMenu('nonveg')">🔴 Non-Veg</button>
+      <button class="tab-btn" onclick="filterMenu('starters')">Starters</button>
+      <button class="tab-btn" onclick="filterMenu('main')">Main Course</button>
+      <button class="tab-btn" onclick="filterMenu('biryani')">Biryani</button>
+      <button class="tab-btn" onclick="filterMenu('desserts')">Desserts</button>
+      <button class="tab-btn" onclick="filterMenu('drinks')">Drinks</button>
+    </div>
+    <div class="menu-grid" id="menuGrid">
+      <div class="menu-card" data-cat="veg starters">
+        <div class="menu-icon">🥗</div>
+        <h3>Veg Starter Platter</h3>
+        <p>Fresh seasonal vegetables with chutneys</p>
+        <span class="veg-tag">🟢 Veg</span>
+      </div>
+      <div class="menu-card" data-cat="nonveg starters">
+        <div class="menu-icon">🍗</div>
+        <h3>Chicken 65</h3>
+        <p>Crispy spiced chicken starter</p>
+        <span class="nonveg-tag">🔴 Non-Veg</span>
+      </div>
+      <div class="menu-card" data-cat="veg main">
+        <div class="menu-icon">🍛</div>
+        <h3>Dal Tadka</h3>
+        <p>Classic lentil curry with tempering</p>
+        <span class="veg-tag">🟢 Veg</span>
+      </div>
+      <div class="menu-card" data-cat="nonveg main">
+        <div class="menu-icon">🍖</div>
+        <h3>Mutton Curry</h3>
+        <p>Slow cooked traditional mutton curry</p>
+        <span class="nonveg-tag">🔴 Non-Veg</span>
+      </div>
+      <div class="menu-card" data-cat="veg biryani">
+        <div class="menu-icon">🍚</div>
+        <h3>Veg Biryani</h3>
+        <p>Aromatic basmati rice with vegetables</p>
+        <span class="veg-tag">🟢 Veg</span>
+      </div>
+      <div class="menu-card" data-cat="nonveg biryani">
+        <div class="menu-icon">🍚</div>
+        <h3>Chicken Biryani</h3>
+        <p>Hyderabadi style chicken biryani</p>
+        <span class="nonveg-tag">🔴 Non-Veg</span>
+      </div>
+      <div class="menu-card" data-cat="veg desserts">
+        <div class="menu-icon">🍮</div>
+        <h3>Gulab Jamun</h3>
+        <p>Soft sweet balls in sugar syrup</p>
+        <span class="veg-tag">🟢 Veg</span>
+      </div>
+      <div class="menu-card" data-cat="veg desserts">
+        <div class="menu-icon">🍨</div>
+        <h3>Kheer</h3>
+        <p>Creamy rice pudding with dry fruits</p>
+        <span class="veg-tag">🟢 Veg</span>
+      </div>
+      <div class="menu-card" data-cat="veg drinks">
+        <div class="menu-icon">🥤</div>
+        <h3>Buttermilk</h3>
+        <p>Cool refreshing spiced buttermilk</p>
+        <span class="veg-tag">🟢 Veg</span>
+      </div>
+      <div class="menu-card" data-cat="veg drinks">
+        <div class="menu-icon">🧃</div>
+        <h3>Fresh Juice</h3>
+        <p>Seasonal fresh fruit juices</p>
+        <span class="veg-tag">🟢 Veg</span>
+      </div>
+      <div class="menu-card" data-cat="veg main">
+        <div class="menu-icon">🫓</div>
+        <h3>Chapati + Paneer</h3>
+        <p>Soft chapatis with rich paneer curry</p>
+        <span class="veg-tag">🟢 Veg</span>
+      </div>
+      <div class="menu-card" data-cat="nonveg main">
+        <div class="menu-icon">🍳</div>
+        <h3>Egg Curry</h3>
+        <p>Spicy egg curry with gravy</p>
+        <span class="nonveg-tag">🔴 Non-Veg</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="gallery-section">
+    <div class="section-title">
+      <h2 data-en="Our Gallery" data-te="మా గ్యాలరీ" data-ta="எங்கள் கேலரி">Our Gallery</h2>
+      <p data-en="Moments from our events" data-te="మా కార్యక్రమాల నుండి క్షణాలు" data-ta="எங்கள் நிகழ்வுகளிலிருந்து தருணங்கள்">Moments from our events</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item">🍛<p>Wedding Feast</p></div>
+      <div class="gallery-item">🎊<p>Reception</p></div>
+      <div class="gallery-item">🍗<p>Starters</p></div>
+      <div class="gallery-item">🍚<p>Biryani</p></div>
+      <div class="gallery-item">🍮<p>Desserts</p></div>
+      <div class="gallery-item">🎂<p>Birthday</p></div>
+    </div>
+    <p style="text-align:center; color:#888; margin-top:16px; font-size:0.85rem;">
+      📸 Add your event photos in the images folder
+    </p>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" class="reviews-section">
+    <div class="section-title">
+      <h2 data-en="Customer Reviews" data-te="కస్టమర్ సమీక్షలు" data-ta="வாடிக்கையாளர் மதிப்புரைகள்">Customer Reviews</h2>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"The food was absolutely amazing! Everyone loved the biryani. Highly recommended for weddings!"</p>
+        <h4>— Ravi Kumar</h4>
+        <span>Wedding</span>
+      </div>
+      <div class="review-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"Best catering service we have ever hired. The taste was authentic and service was excellent!"</p>
+        <h4>— Priya Sharma</h4>
+        <span>Reception</span>
+      </div>
+      <div class="review-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"Very hygienic and tasty food. The team was very professional and on time. Will book again!"</p>
+        <h4>— Suresh Babu</h4>
+        <span>Birthday</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section id="booking" class="booking-section">
+    <div class="section-title">
+      <h2 data-en="Book Your Event" data-te="మీ కార్యక్రమాన్ని బుక్ చేయండి" data-ta="உங்கள் நிகழ்வை பதிவு செய்யுங்கள்">Book Your Event</h2>
+    </div>
+
+    <div class="booking-container">
+      <div class="booking-form-box">
+        <div id="bookingForm">
+          <div class="form-row">
+            <input type="text" id="name" placeholder="Your Full Name" required/>
+            <input type="tel" id="phone" placeholder="Phone Number" required/>
+          </div>
+          <div class="form-row">
+            <input type="email" id="email" placeholder="Email Address"/>
+            <select id="event_type">
+              <option value="">Select Event Type</option>
+              <option>Wedding</option>
+              <option>Reception</option>
+              <option>Engagement</option>
+              <option>Birthday</option>
+              <option>Corporate</option>
+              <option>House Warming</option>
+              <option>Baby Shower</option>
+              <option>Festival</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <input type="date" id="event_date" required/>
+            <input type="text" id="venue" placeholder="Event Venue / Location"/>
+          </div>
+          <div class="form-row">
+            <select id="food_type">
+              <option value="">Food Type</option>
+              <option>Veg Only</option>
+              <option>Non-Veg Only</option>
+              <option>Both Veg & Non-Veg</option>
+            </select>
+            <input type="number" id="guest_count" placeholder="Number of Guests" min="10"/>
+          </div>
+
+          <div class="menu-select">
+            <label><b>Select Menu Items:</b></label>
+            <div class="menu-checkboxes">
+              <label><input type="checkbox" value="Veg Starter Platter"/> Veg Starter Platter</label>
+              <label><input type="checkbox" value="Chicken 65"/> Chicken 65</label>
+              <label><input type="checkbox" value="Dal Tadka"/> Dal Tadka</label>
+              <label><input type="checkbox" value="Mutton Curry"/> Mutton Curry</label>
+              <label><input type="checkbox" value="Veg Biryani"/> Veg Biryani</label>
+              <label><input type="checkbox" value="Chicken Biryani"/> Chicken Biryani</label>
+              <label><input type="checkbox" value="Gulab Jamun"/> Gulab Jamun</label>
+              <label><input type="checkbox" value="Kheer"/> Kheer</label>
+              <label><input type="checkbox" value="Buttermilk"/> Buttermilk</label>
+              <label><input type="checkbox" value="Fresh Juice"/> Fresh Juice</label>
+            </div>
+          </div>
+
+          <textarea id="special_requests" placeholder="Any special requests or notes..." rows="3"></textarea>
+
+          <button class="btn-primary" onclick="submitBooking()" style="width:100%; margin-top:16px;">
+            ✅ Confirm Booking
+          </button>
+        </div>
+
+        <!-- Confirmation -->
+        <div id="confirmation" class="confirmation hidden">
+          <div class="confirm-icon">🎉</div>
+          <h2>Booking Confirmed!</h2>
+          <p>Your Reference Number:</p>
+          <h3 id="refNumber" class="ref-number"></h3>
+          <p>We will contact you shortly on your phone number.</p>
+          <button class="btn-whatsapp" onclick="sendWhatsApp()">
+            📱 Send on WhatsApp
+          </button>
+          <button class="btn-secondary" onclick="newBooking()" style="margin-top:10px;">
+            Make Another Booking
+          </button>
+        </div>
+      </div>
+
+      <!-- Calendar -->
+      <div class="calendar-box">
+        <h3>📅 Check Availability</h3>
+        <p>🔴 Booked &nbsp; 🟢 Available</p>
+        <div id="calendar"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact-section">
+    <div class="section-title">
+      <h2 data-en="Contact Us" data-te="మమ్మల్ని సంప్రదించండి" data-ta="எங்களை தொடர்பு கொள்ளுங்கள்">Contact Us</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-icon">📞</div>
+        <h3 data-en="Phone" data-te="ఫోన్" data-ta="தொலைபேசி">Phone</h3>
+        <a href="tel:+919999999999">+91 99999 99999</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">📧</div>
+        <h3 data-en="Email" data-te="ఇమెయిల్" data-ta="மின்னஞ்சல்">Email</h3>
+        <a href="mailto:ssrcatering@gmail.com">ssrcatering@gmail.com</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">📍</div>
+        <h3 data-en="Location" data-te="స్థానం" data-ta="இடம்">Location</h3>
+        <p>Chittoor, Andhra Pradesh</p>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">🕐</div>
+        <h3 data-en="Working Hours" data-te="పని సమయాలు" data-ta="வேலை நேரம்">Working Hours</h3>
+        <p>Mon - Sun: 8AM - 8PM</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>🍛 SSR Catering Service | Made with ❤️ | © 2026</p>
+    <p style="margin-top:8px;">
+      <a href="#home">Home</a> |
+      <a href="#menu">Menu</a> |
+      <a href="#booking">Book Now</a> |
+      <a href="#contact">Contact</a>
+    </p>
+  </footer>
+
+</div>
+
+<!-- WhatsApp Float Button -->
+<a href="https://wa.me/919999999999" class="whatsapp-float" target="_blank">💬</a>
+
+<!-- Back to Top -->
+<button class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">▲</button>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
