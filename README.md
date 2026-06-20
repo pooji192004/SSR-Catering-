@@ -69,7 +69,7 @@ Database file:
 
 database.db
 
-The database stores:
+## The database stores:
 
 Customer Details
 Login Credentials
